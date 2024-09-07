@@ -52,6 +52,7 @@
     "signInWithGithub": "使用 Github 账户登录",
     "signInWithDiscord": "使用 Discord 账户登录",
     "signInWithApple": "使用 Apple 账户登录",
+    "continueAnotherWay": "继续以其他方式",
     "signUpWithGoogle": "使用 Google 账户注册",
     "signUpWithGithub": "使用 Github 账户注册",
     "signUpWithDiscord": "使用 Discord 账户注册",
@@ -165,6 +166,8 @@
   "newBoardText": "新建看板",
   "chat": {
     "newChat": "AI 对话",
+    "inputMessageHint": "询问@:appName AI",
+    "inputLocalAIMessageHint": "询问@:appName本地 AI",
     "unsupportedCloudPrompt": "该功能仅在使用 @:appName Cloud 时可用",
     "relatedQuestion": "相关问题",
     "serverUnavailable": "服务暂时不可用，请稍后再试",
@@ -175,7 +178,17 @@
     "question2": "介绍一下 GTD 工作法",
     "question3": "为什么使用 Rust",
     "question4": "使用现有食材制定一份菜谱",
-    "aiMistakePrompt": "AI 可能出错，请验证重要信息"
+    "aiMistakePrompt": "AI 可能出错，请验证重要信息",
+    "chatWithFilePrompt": "您想与文件聊天吗？",
+    "indexFileSuccess": "成功索引文件",
+    "inputActionNoPages": "无结果",
+    "referenceSource": "找到 {} 个来源",
+    "referenceSources": "找到 {} 个来源",
+    "clickToMention": "点击提交页面",
+    "uploadFile": "上传 PDF、md 或 txt 文件进行聊天",
+    "questionTitle": "想法",
+    "questionDetail": "嗨 {}！今天我能为您做些什么？",
+    "indexingFile": "索引 {}"
   },
   "trash": {
     "text": "回收站",
@@ -281,7 +294,33 @@
     "justNow": "现在",
     "minutesAgo": "{count} 分钟以前",
     "lastViewed": "最近一次查看",
-    "removeSuccess": "成功移除"
+    "favoriteAt": "已收藏",
+    "emptyRecent": "没有最近页面",
+    "emptyRecentDescription": "当您查看页面时，它们将出现在这里以便于检索。",
+    "emptyFavorite": "没有收藏页面",
+    "emptyFavoriteDescription": "将页面标记为收藏——它们将列在这里以便快速访问！",
+    "removePageFromRecent": "从最近页面中删除该页面吗？",
+    "removeSuccess": "成功移除",
+    "favoriteSpace": "收藏夹",
+    "RecentSpace": "最近的",
+    "Spaces": "空间",
+    "upgradeToPro": "升级至专业版",
+    "upgradeToAIMax": "解锁无限AI",
+    "storageLimitDialogTitle": "您的免费存储空间已用完。升级以解锁无限存储空间",
+    "storageLimitDialogTitleIOS": "您的免费存储空间已用完。",
+    "aiResponseLimitTitle": "您已用完免费 AI 响应。升级至专业版计划或购买 AI 附加组件以解锁无限响应",
+    "aiResponseLimitTitleIOS": "您的免费 AI 响应已用完。",
+    "aiResponseLimitDialogTitle": "AI 响应已达上限",
+    "aiResponseLimit": "您已经用完了免费的AI响应。\n前往设置->计划->点击AI Max或Pro Plan以获取更多AI响应",
+    "askOwnerToUpgradeToPro": "您的工作区免费存储空间即将用完。请要求您的工作区所有者升级到专业版",
+    "askOwnerToUpgradeToProIOS": "您的工作区可用存储空间即将用完。",
+    "askOwnerToUpgradeToAIMax": "您的工作区免费 AI 响应已用完。请要求您的工作区所有者升级计划或购买 AI 附加组件",
+    "askOwnerToUpgradeToAIMaxIOS": "您的工作区中免费的 AI 响应即将用完。",
+    "purchaseStorageSpace": "购买存储空间",
+    "purchaseAIResponse": "购买 ",
+    "askOwnerToUpgradeToLocalAI": "要求工作区所有者启用设备上的 AI",
+    "upgradeToAILocal": "在您的设备上运行本地模型以获得终极隐私",
+    "upgradeToAILocalDesc": "用 PDF 聊天、提高写作水平并使用本地 AI 自动填充表格"
   },
   "notifications": {
     "export": {
@@ -320,11 +359,16 @@
     "update": "更新",
     "share": "分享",
     "removeFromFavorites": "从收藏夹中",
+    "removeFromRecent": "从最近删除",
     "addToFavorites": "添加到收藏夹",
+    "favoriteSuccessfully": "收藏成功",
+    "unfavoriteSuccessfully": "取消成功",
+    "duplicateSuccessfully": "复制成功",
     "rename": "重命名",
     "helpCenter": "帮助中心",
     "add": "添加",
     "yes": "是",
+    "no": "不",
     "clear": "清空",
     "remove": "移除",
     "dontRemove": "不移除",
@@ -338,6 +382,12 @@
     "signInGithub": "使用 Github 账户登录",
     "signInDiscord": "使用 Discord 账户登录",
     "more": "更多",
+    "create": "创造",
+    "close": "关闭",
+    "next": "下一个",
+    "previous": "以前的",
+    "submit": "提交",
+    "download": "下载",
     "Done": "完成",
     "Cancel": "取消",
     "OK": "确认"
@@ -364,9 +414,19 @@
   },
   "settings": {
     "title": "设置",
+    "popupMenuItem": {
+      "settings": "设置",
+      "members": "成员",
+      "trash": "垃圾",
+      "helpAndSupport": "帮助和支持"
+    },
     "accountPage": {
       "menuLabel": "我的账户",
       "title": "我的账户",
+      "general": {
+        "title": "帐户名称和个人资料图片",
+        "changeProfilePicture": "更改个人资料图片"
+      },
       "email": {
         "title": "邮箱",
         "actions": {
@@ -402,18 +462,29 @@
           "dark": "黑暗"
         }
       },
+      "resetCursorColor": {
+        "title": "重置文档光标颜色",
+        "description": "您确定要重置光标颜色吗？"
+      },
+      "resetSelectionColor": {
+        "title": "重置文档选择颜色",
+        "description": "您确实要重置选择颜色吗？"
+      },
       "theme": {
         "title": "主题",
-        "description": "选择预设主题，或上传你自己的自定义主题。"
+        "description": "选择预设主题，或上传你自己的自定义主题。",
+        "uploadCustomThemeTooltip": "上传自定义主题"
       },
       "workspaceFont": {
-        "title": "工作区字体"
+        "title": "工作区字体",
+        "noFontHint": "未找到字体，尝试另一个。"
       },
       "textDirection": {
         "title": "文字方向",
         "leftToRight": "从左到右",
         "rightToLeft": "从右到左",
-        "auto": "自动"
+        "auto": "自动",
+        "enableRTLItems": "启用 RTL 工具栏项"
       },
       "layoutDirection": {
         "title": "布局方向",
@@ -422,9 +493,14 @@
       },
       "dateTime": {
         "title": "日期 & 时间",
+        "example": "{} 在 {} （{}）",
         "24HourTime": "24 小时制",
         "dateFormat": {
           "label": "日期格式",
+          "local": "本地的",
+          "us": "美国",
+          "iso": "ISO",
+          "friendly": "友好的",
           "dmy": "日/月/年"
         }
       },
@@ -461,12 +537,14 @@
           "resetTooltip": "重置为默认位置"
         },
         "resetDialog": {
+          "title": "你确定吗？",
           "description": "将数据路径重置为默认位置不会删除你的数据。如果你想重新导入当前数据，你应该先复制当前位置的路径。"
         }
       },
       "importData": {
         "title": "导入数据",
         "tooltip": "从 @:appName 备份/数据文件夹导入数据",
+        "description": "从另一个@:appName数据文件夹复制数据",
         "action": "浏览文件夹"
       },
       "encryption": {
@@ -476,6 +554,7 @@
         "descriptionEncrypted": "你的数据已加密。",
         "action": "加密数据",
         "dialog": {
+          "title": "加密所有数据？",
           "description": "加密所有数据将保证数据安全。此操作无法撤消。您确定要继续吗？"
         }
       },
@@ -483,9 +562,102 @@
         "title": "清除缓存",
         "description": "如果你遇到图片无法加载或字体无法正确显示的问题，请尝试清除缓存。此操作不会删除你的用户数据。",
         "dialog": {
+          "title": "清除缓存",
           "description": "清除缓存会导致加载时重新下载图像和字体。此操作不会删除或修改你的数据。",
           "successHint": "缓存已清除！"
         }
+      },
+      "data": {
+        "fixYourData": "修复您的数据",
+        "fixButton": "修复",
+        "fixYourDataDescription": "如果您的数据出现问题，可以在此处尝试修复。"
+      }
+    },
+    "shortcutsPage": {
+      "menuLabel": "快捷键",
+      "title": "快捷键",
+      "editBindingHint": "输入新的快捷键",
+      "searchHint": "搜索",
+      "actions": {
+        "resetDefault": "重置默认值"
+      },
+      "errorPage": {
+        "message": "无法加载快捷方式：{}",
+        "howToFix": "请再试一次，如果问题仍然存在，请在 GitHub 上搜索。"
+      },
+      "resetDialog": {
+        "title": "重置快捷键",
+        "description": "这会将您的所有键绑定重置为默认值，您以后无法撤消此操作，您确定要继续吗？",
+        "buttonLabel": "重置"
+      },
+      "conflictDialog": {
+        "title": "{} 当前正在使用中",
+        "descriptionPrefix": "此键当前已被绑定在",
+        "descriptionSuffix": "。如果您替换此键绑定，它将从 {} 中删除。",
+        "confirmLabel": "继续"
+      },
+      "editTooltip": "按下开始编辑按键绑定",
+      "keybindings": {
+        "toggleToDoList": "切换待办事项列表",
+        "insertNewParagraphInCodeblock": "插入新段落",
+        "pasteInCodeblock": "粘贴到代码块中",
+        "selectAllCodeblock": "选择全部",
+        "indentLineCodeblock": "在行首插入两个空格",
+        "outdentLineCodeblock": "删除行首的两个空格",
+        "twoSpacesCursorCodeblock": "在光标处插入两个空格",
+        "copy": "复制选择",
+        "paste": "粘贴内容",
+        "cut": "剪切选择",
+        "alignLeft": "左对齐文本",
+        "alignCenter": "文本居中对齐",
+        "alignRight": "右对齐文本",
+        "undo": "撤消",
+        "redo": "重做",
+        "convertToParagraph": "将块转换为段落",
+        "backspace": "删除",
+        "deleteLeftWord": "删除左边的单词",
+        "deleteLeftSentence": "删除左边的句子",
+        "delete": "删除右边的字符",
+        "deleteMacOS": "删除左边的字符",
+        "deleteRightWord": "删除右边的单词",
+        "moveCursorLeft": "向左移动光标",
+        "moveCursorBeginning": "将光标移至开头",
+        "moveCursorLeftWord": "将光标向左移动一个单词",
+        "moveCursorLeftSelect": "选择并向左移动光标",
+        "moveCursorBeginSelect": "选择并将光标移至开头",
+        "moveCursorLeftWordSelect": "选择并将光标向左移动一个单词",
+        "moveCursorRight": "向右移动光标",
+        "moveCursorEnd": "将光标移至末尾",
+        "moveCursorRightWord": "将光标向右移动一个单词",
+        "moveCursorRightSelect": "选择并将光标向右移动",
+        "moveCursorEndSelect": "选择并将光标移至末尾",
+        "moveCursorRightWordSelect": "选择并将光标向右移动一个单词",
+        "moveCursorUp": "向上移动光标",
+        "moveCursorTopSelect": "选择并将光标移至顶部",
+        "moveCursorTop": "将光标移至顶部",
+        "moveCursorUpSelect": "选择并向上移动光标",
+        "moveCursorBottomSelect": "选择并将光标移至底部",
+        "moveCursorBottom": "将光标移至底部",
+        "moveCursorDown": "向下移动光标",
+        "moveCursorDownSelect": "选择并向下移动光标",
+        "home": "滚动到顶部",
+        "end": "滚动到底部",
+        "toggleBold": "切换粗体",
+        "toggleItalic": "切换斜体",
+        "toggleUnderline": "切换下划线",
+        "toggleStrikethrough": "切换删除线",
+        "toggleCode": "切换内联代码",
+        "toggleHighlight": "切换突出显示",
+        "showLinkMenu": "显示链接菜单",
+        "openInlineLink": "打开内联链接",
+        "openLinks": "打开所有选定的链接",
+        "indent": "缩进",
+        "outdent": "减少缩进",
+        "exit": "退出编辑",
+        "pageUp": "向上滚动一页",
+        "pageDown": "向下滚动一页",
+        "selectAll": "选择全部",
+        "pasteWithoutFormatting": "粘贴内容而不设置格式"
       }
     },
     "planPage": {
